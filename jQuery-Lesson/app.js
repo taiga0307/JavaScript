@@ -93,19 +93,59 @@ $(function(){
 });
 */
 
-//・マウスクリックのイベント
+/*
+・マウスクリックのイベント
 $(function(){
-    $('.box1').on('click', function(){ //=>$('.セレクタ名').on('click',function() {
-        $('.box1').addClass('box1-ext'); //=>イベント発生時に行われる処理
+    $('.box1').on('click', function(){ =>$('.セレクタ名').on('click',function() {
+        $('.box1').addClass('box1-ext'); =>イベント発生時に行われる処理
     });
  
-    $('.box1').mouseout(function(){//$('.セレクタ名').on('click',function() {
-        $('.box1').removeClass('box1-ext'); //=>イベント発生時に行われる処理
+    $('.box1').mouseout(function(){ =>$('.セレクタ名').on('click',function() {
+        $('.box1').removeClass('box1-ext'); =>イベント発生時に行われる処理
     });
  
 });
+*/
 
+/*
+・「this」の記述方法　イベントが発生した要素のみ変化させたいとき使用
+<classが多い記述>
+$(function(){
+    $('.bg1').on('click', function(){
+        $('.bg1').slideUp();
+    });
+ 
+    $('.bg2').on('click', function(){
+        $('.bg2').slideUp();
+    });
+ 
+    $('.bg3').on('click', function(){
+        $('.bg3').slideUp();
+    });
+ 
+    $('.bg4').on('click', function(){
+        $('.bg4').slideUp();
+    });
+});
+*/
 
+/*
+<thisを活用した記述>
+$(function(){
+    $('.box1').on('click', function(){
+        $(this).slideUp(); //box1クラスの正方形がクリックされたとき、this（クリックされた要素）のみslideUpさせる
+    });
+});
+*/
+
+/*
+・「children」の記述方法　HTML要素直下のすべての子要素を取得するとき使用
+$(function(){
+    $('button').on('click', function(){ =>「button要素がクリックされたときに、処理を実行してください」の意味
+        $('ul').children().css('color','red'); =>HTML要素直下のすべての子要素を取得します。ここでのchildrenは「ul要素の子要素」、つまり、li要素が対象
+    });
+});
+*/
 
 
 
