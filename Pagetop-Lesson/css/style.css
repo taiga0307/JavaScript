@@ -1,0 +1,28 @@
+@charset "UTF-8"; 
+/*スタイルシートがhtmlとは分離したファイルに存在する場合は文字コードを決定しなければならないというルール*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+h1 {
+  text-align: center;
+  margin: 50px 0;
+}
+ 
+.box {
+  height: 300px;
+  width: 600px;
+  margin: 0 auto 50px;
+  background-color: #eee;
+}
+ 
+#back {
+  position: fixed; /*「トップへ戻る」ボタンはつねに同じ位置に表示*/
+  right: 20px; /*「トップへ戻る」ボタンを右20pxの位置に表示*/
+  bottom: 20px; /*「トップへ戻る」ボタンを下20pxの位置に表示*/
+}
+ 
+#back img {
+  width: 50px;

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="utf8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+    <title>9章【「トップへ戻る」ボタンを作ってみよう】</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css" media="all"><!-- style.cssファイルを読み込んでいる -->
+  </head>
+  <body>
+    <h1>9章【「トップへ戻る」ボタンを作ってみよう】</h1>
+ 
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+ 
+    <span id="back"><!-- idの方が一意の指定のため処理速度がclassよりも早い -->
+      <a href="#"><!-- ページの最上層へ移動するリンク -->
+        <img src="img/arrow.png">
+      </a>
+    </span>
+ 
+    <script type="text/javascript" src="js/jquery.min.js"></script><!-- jquery.min.jsファイルを読み込んでいる -->
+    <script type="text/javascript" src="js/script.js"></script><!-- script.jsファイルを読み込んでいる -->
+  </body>
+  </html>
