@@ -53,22 +53,57 @@ $(function(){
 
 //.slideDown();、.slideUp();、.show();、.hide();特定のクラス名のdiv要素のみは表示・非表示を切り替えるといったことが可能
 
-
-
-//<確認問題>
-
+/*
+<確認問題>
 $(function(){
-	$('.box1').slideDown(function(){
+	$('.box1').slideDown(3000,function(){ =>表示スピードを調整するには第１引数に入力.slideDown(3000)
 		$('.box1').css({
 		'background-color': '#0000FF',
 		'height': '100px',
 		'width': '200px'
-	    }).slideUp();
+	    }).slideUp(2000);
     });
 });
+*/
 
 
+/*
+・マウスオーバー、マウスアウトの記述
+$(function(){
+    $('.box1').mouseover(function(){ =>$('.セレクタ名').イベント名(function(){
+        $('.box1').css({'background-color': '#0000FF'}); =>イベント発生時に行われる処理
+    });
 
+    $('.box1').mouseout(function(){
+        $('.box1').css({'background-color': '#FF0000'});
+    });
+});
+*/
+
+/*
+・マウスオーバー時のCSS（class）をあらかじめ定義しておき、マウスカーソルの状況に応じて、そのCSSを追加（または解除）するように設定
+$(function(){
+    $('.box1').mouseover(function(){
+        $('.box1').addClass('box1-ext'); =>addClass( )は対象のHTML要素にclass属性を追加
+    });
+
+    $('.box1').mouseout(function(){
+        $('.box1').removeClass('box1-ext'); =>removeClass( )は要素に設定されているclass属性が解除
+    });
+});
+*/
+
+//・マウスクリックのイベント
+$(function(){
+    $('.box1').on('click', function(){ //=>$('.セレクタ名').on('click',function() {
+        $('.box1').addClass('box1-ext'); //=>イベント発生時に行われる処理
+    });
+ 
+    $('.box1').mouseout(function(){//$('.セレクタ名').on('click',function() {
+        $('.box1').removeClass('box1-ext'); //=>イベント発生時に行われる処理
+    });
+ 
+});
 
 
 
